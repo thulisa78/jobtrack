@@ -15,6 +15,7 @@
 // ╚══════════════════════════════════════════════════════════════╝
 
 import { useState, useEffect, useCallback } from "react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import { getAnalytics } from "firebase/analytics";
 // ── Firebase SDK imports ────────────────────────────────────────────────────
 import { initializeApp } from "firebase/app";
@@ -1233,6 +1234,7 @@ export default function App() {
       {authState === "authenticated" && currentUser && (
         <JobTrackApp user={currentUser} />
       )}
+      <SpeedInsights />
     </>
   );
 }
